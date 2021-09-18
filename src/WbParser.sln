@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WbParser.Domain", "WbParser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WbParser.Infrastructure.Data", "WbParser.Infrastructure.Data\WbParser.Infrastructure.Data.csproj", "{B1ACF5A2-6686-4D30-904E-3923A6BA1607}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WbParser.Interface", "WbParser.Interface\WbParser.Interface.csproj", "{1089567C-54ED-4058-9860-8B0E46982931}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{B1ACF5A2-6686-4D30-904E-3923A6BA1607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1ACF5A2-6686-4D30-904E-3923A6BA1607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1ACF5A2-6686-4D30-904E-3923A6BA1607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1089567C-54ED-4058-9860-8B0E46982931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1089567C-54ED-4058-9860-8B0E46982931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1089567C-54ED-4058-9860-8B0E46982931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1089567C-54ED-4058-9860-8B0E46982931}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,8 +2,10 @@
 {
     public class RatingByQueryEntity : Entity
     {
-        public RatingByQueryEntity()
-        { }
+        public RatingByQueryEntity(long position)
+        {
+            Position = position;
+        }
 
         public RatingByQueryEntity(long articleId, 
             long root,
@@ -21,7 +23,7 @@
             long feedbacks,
             bool diffPrice, 
             bool? isNew,
-            long? promopic)
+            long? promopic, long position)
         {
             ArticleId = articleId;
             Root = root;
@@ -40,7 +42,9 @@
             DiffPrice = diffPrice;
             IsNew = isNew;
             Promopic = promopic;
+            Position = position;
         }
+        public long Position { get; private set; }
         public long ArticleId { get; private set; }
         public long Root { get; private set; }
 

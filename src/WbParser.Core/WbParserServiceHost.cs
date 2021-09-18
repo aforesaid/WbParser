@@ -64,7 +64,10 @@ namespace WbParser.Core
                 .AddScoped<IGenericRepository<RecommendQueryEntity>, EfGenericRepository<RecommendQueryEntity>>();
             _serviceCollection
                 .AddScoped<IGenericRepository<SyncRatingQueryEntity>, EfGenericRepository<SyncRatingQueryEntity>>();
-
+            _serviceCollection
+                .AddScoped<IGenericRepository<RatingSupportedProductEntity>,
+                    EfGenericRepository<RatingSupportedProductEntity>>();
+            
             _serviceCollection.AddScoped<RecommendQueryRepositoryManager>();
         }
     }

@@ -7,9 +7,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\WbParser.Infrastructure.Data\WbParser.Infrastructure.Data.csproj" />
+      <ProjectReference Include="..\WbParser.Interface\WbParser.Interface.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="MassTransit" Version="7.2.2" />
+      <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.2.2" />
+      <PackageReference Include="MassTransit.RabbitMQ" Version="7.2.2" />
       <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />

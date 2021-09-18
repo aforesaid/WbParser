@@ -39,7 +39,6 @@ namespace WbParser.Core
                 Log.CloseAndFlush();
                 throw;
             }
-
         }
         //     private static int currentCount = 0;
         //     private static SemaphoreSlim SemaphoreSlim = new(20);

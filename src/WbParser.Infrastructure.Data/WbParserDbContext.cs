@@ -15,7 +15,8 @@ namespace WbParser.Infrastructure.Data
         protected DbSet<RecommendQueryEntity> RecommendQueries { get; set; }
         protected DbSet<RatingByQueryEntity> RatingByQueryEntities { get; set; }
         protected DbSet<SyncRatingQueryEntity> SyncRatingQueryEntities { get; set; }
-        
+        protected DbSet<RatingSupportedProductEntity> RatingSupportedProductEntities { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -47,6 +48,12 @@ namespace WbParser.Infrastructure.Data
             //SyncRatingQueryEntity
             modelBuilder.Entity<SyncRatingQueryEntity>().HasKey(x => x.Id);
             modelBuilder.Entity<SyncRatingQueryEntity>().HasIndex(x => x.Name);
+            
+            //RatingSupportedProductEntities
+            modelBuilder.Entity<RatingSupportedProductEntity>().HasKey(x => x.Id);
+            modelBuilder.Entity<RatingSupportedProductEntity>().HasIndex(x => x.ArticleId)
+                .IsUnique();
+            modelBuilder.Entity<RatingSupportedProductEntity>().HasIndex(x => x.Inactive);
             
             base.OnModelCreating(modelBuilder);
         }
