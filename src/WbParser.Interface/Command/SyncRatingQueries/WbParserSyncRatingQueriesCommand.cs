@@ -2,6 +2,7 @@ namespace WbParser.Interface.Command.SyncRatingQueries
 {
     public class WbParserSyncRatingQueriesCommand
     {
+        public const string QueueName = "wb_parser_queue";
         public WbParserSyncRatingQueriesCommand()
         { }
 
