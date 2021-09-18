@@ -21,7 +21,7 @@ namespace WbParser.Infrastructure.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //TODO: задать дефолтную строку подключения
+                optionsBuilder.UseNpgsql("User ID=postgres;Password=root;Server=localhost;Port=5432;Database=wbparser;Integrated Security=true;");
             }
             base.OnConfiguring(optionsBuilder);
         }
