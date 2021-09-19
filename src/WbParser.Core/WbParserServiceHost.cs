@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WbParser.Core.RequestHandlers.Command;
+using WbParser.Core.RequestHandlers.Queries.AddRatingQueries;
 using WbParser.Core.RequestHandlers.Queries.AddRatingSupportedProducts;
 using WbParser.Core.Services.Api.WbPublicApi;
 using WbParser.Domain.Entities;
@@ -87,7 +88,8 @@ namespace WbParser.Core
                 busConfig.AddConsumer<WbParserSyncRecommendQueriesRequestHandler>();
                 busConfig.AddConsumer<WbParserSyncRatingQueriesRequestHandler>();
                 busConfig.AddConsumer<WbParserAddRatingSupportedProductsRequestHandler>();
-
+                busConfig.AddConsumer<WbParserAddRatingQueriesRequestHandler>();
+                
                 busConfig.UsingRabbitMq((context, cfg) =>
                 {
                     cfg.ReceiveEndpoint(WbParserSyncRatingQueriesCommand.QueueName, e =>
