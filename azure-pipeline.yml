@@ -31,8 +31,8 @@ stages:
         Dockerfile: '$(dockerfilePath)'
         buildContext: '$(buildContextPath)'
         tags: '$(tag)'
-    - upload: manifests
-      artifact: manifests
+    - upload: manifest
+      artifact: manifest
 - stage: Deploy
   displayName: Deploy
   jobs:  
